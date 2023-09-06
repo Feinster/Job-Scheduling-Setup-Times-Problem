@@ -131,8 +131,8 @@ def branch_and_bound(n, m, setup_costs, B, J):
             child_model_1.add_constraint(branching_var == 1)
 
             # Add the child models to the stack for further exploration
-            stack.insert(0, child_model_0)
-            stack.insert(0, child_model_1)
+            stack.append(child_model_0)
+            stack.append(child_model_1)
         else:
             # Reached a leaf node with no more branching variables
             if objective_value < best_objective_value:
