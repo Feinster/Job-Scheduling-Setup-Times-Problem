@@ -1,3 +1,6 @@
 venv/
 Python/__pycache__/
 Python/__pycache__/
+Python/medium_instance_results.txt
+Python/large_instance_results.txt
+Python/small_instance_results.txt

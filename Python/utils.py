@@ -9,8 +9,8 @@ def generate_instance(instance_size):
         B = 3 # Tool magazine capacity
         J = [list(np.random.choice(range(1, m), np.random.randint(1, m), replace=False)) for _ in range(n)] # List of operations for each job
     elif instance_size == "medium":
-        n = 5
-        m = 6
+        n = 6
+        m = 7
         setup_costs = np.random.randint(1, 20, m)
         B = 5
         J = [list(np.random.choice(range(1, m), np.random.randint(1, m), replace=False)) for _ in range(n)]
@@ -37,3 +37,7 @@ def extract_job_sequence(solution, n, x):
         if not job_found:
             job_sequence.append(None)
     return job_sequence
+
+# Verifica se un valore è intero
+def is_integer(value):
+    return isinstance(value, int) or value.is_integer()
